@@ -1,0 +1,27 @@
+package com.example.SCM.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+import com.example.SCM.DAO.UserRepo;
+import com.example.SCM.model.User;
+
+@Controller
+public class HomeController {
+	@Autowired
+	private UserRepo repo;
+	
+	@GetMapping("/test")
+	@ResponseBody
+	public String Test()
+	{
+		User user=new User();
+		user.setName("Sarthak");
+		user.setEmail("sarthak@gmail.com");
+		repo.save(user);
+		return "Working";
+	}
+
+}
