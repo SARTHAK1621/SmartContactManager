@@ -3,6 +3,9 @@ package com.example.SCM.model;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Size;
+
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -19,6 +22,8 @@ public class User {
 	@Id
 	@GeneratedValue(strategy= GenerationType.AUTO)
 	private int id;
+	@NotBlank(message="Name can't be blank")
+	@Size(min=2,max=25, message="name must be more than 2 character")
 	private String name;
 	@Column(unique=true)
 	private String email;
@@ -87,6 +92,12 @@ public class User {
 	}
 	public void setContacts(List<Contact> contacts) {
 		this.contacts = contacts;
+	}
+	@Override
+	public String toString() {
+		return "User [id=" + id + ", name=" + name + ", email=" + email + ", password=" + password + ", role=" + role
+				+ ", enabled=" + enabled + ", imageUrl=" + imageUrl + ", about=" + about + ", contacts=" + contacts
+				+ "]";
 	}
 	
 	

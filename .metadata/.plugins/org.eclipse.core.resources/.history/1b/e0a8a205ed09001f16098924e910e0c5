@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="base::Layout(~{::section})">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>This is SignUp page</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+	  <section>
+		 <div class="container">
+			 <div class="row">
+				 <div class="col-md-6 offset-md-3">
+					 <div class="my-card mt-3">
+						 <div th:if="${session.message}"   th:classappend="${session.message.type}" 
+						 class="alert alert-primary" role="alert">
+						 		<p  th:text="${session.message.content}"></p>
+						 		<th:block th:text="${#session.removeAttribute('message')}"></th:block>
+  								
+						</div>
+						 <div class="container text-center" >
+							 <img style="width: 80px;" src="" th:src="@{/img/checklist.png}"/>
+						 </div>
+						 <h1 class="text-center">Register Here !!</h1>
+						 <form action="" th:action="@{/do_register}" method="post" th:object="${user}">
+							 <!-- name field-->
+							 <div class="form-group">
+    						 <label for="name_field">Your Name</label>
+    						 <input name="name"type="text" class="form-control" id="name_field" aria-describedby="emailHelp"
+    						  placeholder="Enter Your Name" required="required" value="user.name">
+    						 
+ 							 </div>
+ 							 <!-- email field-->
+							 <div class="form-group">
+    						 <label for="email_field">Your Email</label>
+    						 <input name="email"type="email" class="form-control" id="email_field" aria-describedby="emailHelp"
+    						  placeholder="Enter Your Email" required="required" value="user.email">
+    						 
+ 							 </div>
+							 <!-- password field-->
+							 <div class="form-group">
+    						 <label for="password_field">Your Password</label>
+    						 <input name="password" type="password" class="form-control" id="password_field" aria-describedby="emailHelp"
+    						  placeholder="Enter Your password" required="required" >
+    						 
+ 							 </div>
+ 							 <!-- user aboutfield-->
+ 							 <div class="form-group">
+								  <textarea name="about" value="user.about" placeholder="Enter Something about yourself" rows="6" class="form-control"></textarea>
+							  </div>
+							  <!-- terms and  condition agreement -->
+							  <div class="form-group form-check text-center">
+								  <input type="checkbox" name="agreement" class="form-check-input" id="agreement"/>
+								  <label for="agreement"> Accept terms and conditions</label>
+								  
+							  </div> 
+							  <div class="container text-center" >
+								  <button class="btn bg-primary btn-block"type="submit"> Submit</button>
+								  <button class="btn bg-warning btn-block"type="reset"> Reset </button>
+							  </div>
+							  
+						 </form>
+					 </div>
+				 </div>
+			 </div>
+		 </div>
+	  </section>
+  </body>
+</html>	

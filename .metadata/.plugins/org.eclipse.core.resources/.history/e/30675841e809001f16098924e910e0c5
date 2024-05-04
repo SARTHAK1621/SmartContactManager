@@ -1,0 +1,6 @@
+package com.example.SCM.helper;
+
+public class Message {
+	private String content;
+
+}

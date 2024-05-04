@@ -1,0 +1,5 @@
+package com.example.SCM.config;
+
+public class MyConfiguration {
+
+}
