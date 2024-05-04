@@ -65,7 +65,7 @@ public class HomeController {
 				return "signup";
 			}
 			user.setPassword(passwordEncoder.encode(user.getPassword()));
-			user.setRole("Role_User");
+			user.setRole("ROLE_USER");
 			user.setEnabled(true);
 			user.setImageUrl("default.png");
 			User result=userRepository.save(user);
