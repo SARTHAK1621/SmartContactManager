@@ -82,6 +82,14 @@ public class Contact {
 	public void setUser(User user) {
 		this.user = user;
 	}
+	@Override
+	public String toString() {
+		return "Contact [cid=" + cid + ", firstname=" + firstname + ", secondname=" + secondname + ", work=" + work
+				+ ", email=" + email + ", phone=" + phone + ", image=" + image + ", description=" + description
+				+ ", user=" + user + "]";
+	}
+	
+	
 	
 	
 
