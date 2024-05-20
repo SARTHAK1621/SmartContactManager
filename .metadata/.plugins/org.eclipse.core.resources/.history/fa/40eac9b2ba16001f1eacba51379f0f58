@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="normal/base::Layout(~{::section})">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SETTINGS</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+	  <section>
+		  <div class="container">
+			  <div class="row">
+				  <div class="col-md-12">
+					  <div class="card">
+						  <div class="card-body text-center">
+							  <h3 class="my-3 mb-3">CHANGE PASSWORD </h3>
+							  <form action="">
+							  <!-- old password field -->
+							  <div class="form-group mt-3">
+								  <input type="text" class="form-control mt-3" placeholder="ENTER YOUR OLD PASSWORD"/>
+							  </div>
+							  <!-- new password field -->
+							  <div class="form-group mt-3">
+								  <input type="text" class="form-control mt-3" placeholder="ENTER YOUR NEW PASSWORD"/>
+							  </div>
+							  <!-- submit button -->
+							  <div class="container text-center">
+								  <button type="submit" class="btn btn-success">CHANGE PASSWORD</button>
+								  <button type="reset" class="btn btn-warning">RESET</button>
+								  
+							  </div>
+							  </form>
+						  </div>
+					  </div>
+				  </div>
+			  </div>
+			  
+		  </div>
+	  </section>
+  </body>
+</html>	
