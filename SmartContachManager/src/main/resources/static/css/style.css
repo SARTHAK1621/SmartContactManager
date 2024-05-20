@@ -83,5 +83,34 @@ body
 	right: 35px;
 	font-size: 36px;
 	cursor: pointer;
-} 
+}
+
+.my_profile_picture
+{
+	width:30px;
+	height:30px;
+	object-fit: cover;
+	border-radius: 50%;
+	border: 1px solid black;
+}
+
+/*  search css  */
+
+.search-container
+{
+	position: relative;
+}
+.search-result
+{
+	position: absolute;
+	background: white;
+	width: 100%;
+	padding: 10px;
+	border: 5px grey;
+	display: none;
+}
+
+
+
+ 
 

@@ -9,7 +9,15 @@
   </head>
   <body>
 	  <section>
-		  <h1>This is private dashboard</h1>
+		  <div class="card">
+			  <div class="card-body text-center my-5">
+				 <img style="height: 200px; width: 200px;"  class="my_profile_picture" 
+					  src="" th:src="@{'/img/contact_logo.png'}" alt=""/> 
+			  </div>
+			  <h1 class="text-center mt-3 text-secondary font-italic font-weight-light
+			  ">START ADDING YOUR CONTACT ON CLOUD....</h1>
+			  <a th:href="@{/user/add-contact}" class="btn btn-primary btn-block text-uppercase mt-4">Add New Contact</a>
+		  </div>
 	  </section>
   </body>
 </html>	
