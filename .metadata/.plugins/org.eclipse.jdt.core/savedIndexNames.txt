@@ -29,7 +29,6 @@ INDEX VERSION 1.134+C:\Users\sarth\OneDrive\Desktop\Smart Contact Manager\.metad
 151003391.index
 137112868.index
 4236714024.index
-2885134273.index
 2450439825.index
 4169606992.index
 1741629899.index

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="base::Layout(~{::section})">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>This is About page</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+	  <section>
+		  <div id="login">
+        
+        <div class="container">
+            <div id="login-row" class="row justify-content-center align-items-center">
+                <div id="login-column" class="col-md-6">
+                    <div id="login-box" class="col-md-12" style="height: 220px;">
+                        <!-- email form -->
+                        <div class="alert alert-success mt-2" role="alert">
+  							WE SENT OTP TO YOUR EMAIL SUCCESSFULLY
+						</div>
+                        <h3 class="text-center m-3"> EMAIL VERIFICATION</h3>
+                        <form method="post" action="" th:action="@{/send-OTP}">
+							<div class="form-group">
+								<input name="otp" required="required" type="number" placeholder="Enter OTP RECIVED" class="form-control"/>
+							</div>
+							<div class="container text-center">
+								<button class="btn btn-warning">VERIFY OTP</button>
+							</div>
+						</form>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+	  </section>
+  </body>
+</html>	
